@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+
+:root {
+    --white: #fff;
+    --black: #232323;
+    --gray: #8d8d8d;
+    --red: #e83f43;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--gray);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+h1,
+p,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--black);
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    padding: 1.25rem 0;
+}
+
+#logo {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+#highlight {
+    color: var(--red);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-item {
+    display: none;
+}
+
+.slider-item.active {
+    display: block;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous,
+.next {
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.previous:hover,
+.next:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
